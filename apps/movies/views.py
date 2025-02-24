@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from . models import Category, Movie
 kategori_liste = ["macera" ,"romantik" ,"dram", "etiket"]
 film_liste =   [{"isim": "film 1", "id": 1,
                  "kategori": "macera", 
@@ -13,23 +13,25 @@ film_liste =   [{"isim": "film 1", "id": 1,
                 {"isim":"film 4", "id":4, "kategori": "etiket", "puan": 9.5, "resim": "4.jpg" ,"qualityPic":"picsum.photos/800/400?random=4"}
             ]
 # Create your views here.
+
 def home(request):
     data = {
-        "kategoriler": kategori_liste,
-        "filmler": film_liste
+        "kategoriler": Category.objects.all(),
+        "filmler": Movie.objects.all()
     }
     return render(request, "movies/index.html", data)
 
 def movies(request):
     data= {
-        "kategoriler": kategori_liste,
-        "filmler": film_liste
+        "kategoriler": Category.objects.all(),
+        "filmler": Movie.objects.all()
     }
     return render(request, "movies/movies.html", data)
 
 def movie_details(request, id):
     data= {
-        "id": id,
-        "filmler": film_liste
+        "id": Movie.objects.get(id=id),
+        "kategoriler": Category.objects.all(),
+        "filmler": Movie.objects.all()
     }
     return render(request, "movies/details.html", data)

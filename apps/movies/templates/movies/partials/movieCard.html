@@ -3,8 +3,8 @@
 
     <img src="{% static 'img/myImg'|add:f.resim %}" class="card-img-top" alt="..." style="height: 400px; object-fit: cover;">
     <div class="card-body">
-      <h5 class="card-title">{{ f.isim }} filmi</h5>
-      <p class="card-text">{{ f.isim }} filmi baya iyidir</p>
+      <h5 class="card-title">{{ f.name }} filmi</h5>
+      <p class="card-text">{{ f.name }} filmi baya iyidir</p>
       <a href="{% url 'details' f.id %}" class="btn btn-danger">Go somewhere</a>
     </div>
   </div> 
