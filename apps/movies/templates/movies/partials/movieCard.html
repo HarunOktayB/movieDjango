@@ -4,7 +4,8 @@
     <img src="{% static 'img/myImg'|add:f.resim %}" class="card-img-top" alt="..." style="height: 400px; object-fit: cover;">
     <div class="card-body">
       <h5 class="card-title">{{ f.name }} filmi</h5>
-      <p class="card-text">{{ f.name }} filmi baya iyidir</p>
+      <p class="card-text">{{ f.name }} filmi baya iyidir</p> 
+      <!-- buraya model içeriisne yazılan film açıklaması koyulabilir mantık anlaşıldığı için üzerinde uğraşılmdı -->
       <a href="{% url 'details' f.id %}" class="btn btn-danger">Go somewhere</a>
     </div>
   </div> 

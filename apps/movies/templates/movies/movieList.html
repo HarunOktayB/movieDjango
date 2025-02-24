@@ -16,6 +16,7 @@
                         {% for f in filmler  %}
                         <div class="col-4">
                             {% include 'movies/partials/movieCard.html' %}
+                            <!--DRY ilkesine göre kendimizi tekrar etmemek için kullanılabilecek yapıyı modüler hale getirmeliyiz. Hem kod daha okunaklı oluyor.-->
                         </div>
                         {% endfor %}
 

@@ -1,19 +1,10 @@
 from django.shortcuts import render
 from . models import Category, Movie
-kategori_liste = ["macera" ,"romantik" ,"dram", "etiket"]
-film_liste =   [{"isim": "film 1", "id": 1,
-                 "kategori": "macera", 
-                 "puan": 8.5, 
-                 "resim": "1.jpg", 
-                 "qualityPic":"picsum.photos/800/400?random=1"
-                 }, 
 
-                {"isim":"film 2", "id":2, "kategori": "romantik", "puan": 7.5, "resim": "2.jpg", "qualityPic":"picsum.photos/800/400?random=2"}, 
-                {"isim":"film 3", "id":3, "kategori": "dram", "puan": 6.5, "resim": "3.jpg", "qualityPic":"picsum.photos/800/400?random=3"}, 
-                {"isim":"film 4", "id":4, "kategori": "etiket", "puan": 9.5, "resim": "4.jpg" ,"qualityPic":"picsum.photos/800/400?random=4"}
-            ]
-# Create your views here.
-
+# kullanıcıya gösterilecek olan veriler burada organize edilir.
+# eğer bir veritabanı işlemi yapılacaksa burada yapılır.
+# bu basit bir proje olduğu için class tabanlı view yapısını kullanmadık.
+# view fonksiyonları işimizi görmüş oldu.
 def home(request):
     data = {
         "kategoriler": Category.objects.all(),

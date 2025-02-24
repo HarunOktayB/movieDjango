@@ -1,0 +1,20 @@
+{% load static %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Yüksek Puanlı Filmler: 8 Puan Üstü</h1>
+    <div class="row">
+        {% for f in filmler %}
+            {% if f.puan > 8 %}
+            <!-- if yapısı oldukça kolay kullanılabiliyor.-->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{% static 'img/myImg'|add:f.resim %}" class="card-img-top" alt="{{ f.isim }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ f.isim }}</h5>
+                            <p class="card-text">{{ f.kategori }} filmleri içerisinde {{ f.puan }} puan almıştır.</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

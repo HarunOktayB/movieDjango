@@ -31,6 +31,8 @@
             <div class="col-md-8">
                 <div class="card shadow-lg">
                     <!-- Resmi küçültmek için sınıf ekliyoruz -->
+
+                    <!--Burada static local resim yolu denemek amacıyla ve |add özelliğini kullanmak amacıyla karışık bir isimlendirme kullanıldı! -->
                     <img class="product-img" src="{% static 'img/myImg'|add:id.resim %}" alt="{{ id.name }}">
                     <div class="card-body text-center">
                         <h2 class="card-title">{{ id.name }}</h2>

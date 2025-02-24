@@ -56,7 +56,11 @@ ROOT_URLCONF = 'myweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates'], 
+        # Templates klasörü proje içerisinde oluşturulacaksa
+        # her proje içerisinde proje_adi klasörü içerisinde templates->proje_adi klasörü oluşturulur.
+        # Bu klasör içerisine html dosyaları eklenir.
+        # proje_adi/html_dosyasi.html şeklinde çağrılabilir hale gelir. APP_DIRS = True olmalı.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

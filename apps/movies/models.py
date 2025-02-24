@@ -11,6 +11,7 @@ class Category (models.Model):
 class Movie(models.Model):
     name = models.CharField(max_length=100)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    #Eğer bir kategori silinirse o kategoriye ait filmler de silinir.
     puan = models.FloatField()
     resim = models.CharField(max_length=100)
     qualityPic = models.CharField(max_length=100)
