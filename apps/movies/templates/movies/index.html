@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1> Home page </h1>
+
+</div>
+
+<!-- Bootstrap Carousel -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+ <div class="carousel-indicators">
+     {% for f in filmler %}
+         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ forloop.counter0 }}" 
+                 class="{% if forloop.first %}active{% endif %}" 
+                 aria-label="Slide {{ forloop.counter }}"></button>
+     {% endfor %}
+ </div>
+ 
+ <div class="carousel-inner">
+     {% for f in filmler %}
+         <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="5000">
+             <img src="https://{{f.qualityPic}}" class="d-block w-100" alt="{{ f.isim }} filmi">
+             <div class="carousel-caption d-none d-md-block" style="background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);">
+                 <h5 class="text-white font-weight-bold">{{ f.isim }}</h5>
+                 <p class="text-white font-weight-bold">{{ f.isim }} filmi {{ f.kategori }} kategorisinde {{ f.puan }} puan almıştır.</p>
+             </div>
+         </div>
+     {% endfor %}
+ </div>
+
+ <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+ </button>
+ <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+ </button>
+</div>
+
+<ul>
+    {% for k in kategoriler %}
+        <li>{{k}}</li>
+    {% endfor %}
+</ul>
+
+<div>
+ 
+    {% for f in filmler %}
+        {% if f.puan > 8 %}
+            <img src="{%static 'img/myImg'|add:f.resim%}" />
+            <p>{{f.isim}} filmi {{f.kategori}} filmleri içerisinde {{f.puan}} puan almıştır.</p>
+        {% endif %}
+        
+    {% endfor %}
+
+
+
+</body>
+</html>
+{% endblock %}
+
+

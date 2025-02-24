@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Movie Page</h1>
+   
+    {% include 'movies/movieList.html' %}
+ 
+{% endblock %}
+
+<!-- <div class = "text-center">
+    <ul>
+        {% for k in kategoriler %}
+            <li>{{ k }}</li>
+        {% endfor %}
+    </ul>
+</div> -->
+
+
+<!-- <div class="text-center">
+    {% for f in filmler %}
+        <img src="{% static 'img/myImg'|add:f.resim %}" alt="{{ f.isim }} filmi" class="img-fluid mx-auto d-block" />
+        <p>{{ f.isim }} filmi {{ f.kategori }} filmleri içerisinde {{ f.puan }} puan almıştır.</p>
+    {% endfor %}
+</div> -->
