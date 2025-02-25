@@ -14,3 +14,7 @@ html, body {
     padding: 10px;
     text-align: center;
 }
+
+.mt-6 {
+    margin-top: 4.5rem !important; /* Bootstrap'in mt-5 değeri 3rem, mt-6 için 4.5rem kullanabiliriz */
+}
