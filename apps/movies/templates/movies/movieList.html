@@ -8,15 +8,16 @@
                         Tüm Filmler
                     </a>
                     {% for kategori in kategoriler %}    
-                        <a href="{% url 'categories' kategori.id %}" 
-                           class="list-group-item list-group-item-action {% if secilen_kategori.id == kategori.id %}active{% endif %}">
-                            {{ kategori }}
+                        <a href="{% url 'category_movies' kategori.id %}" 
+
+                        class="list-group-item list-group-item-action {% if secilen_kategori.id == kategori.id %}active{% endif %}">
+                        {{ kategori }}
                         </a>
                     {% endfor %}
                 </div>
             </div>
             <div class="col-9">
-                <div class="row">
+                <div class="row mb-3">
                     {% for f in filmler %}
                         <div class="col-4">
                             {% include 'movies/partials/movieCard.html' %}
