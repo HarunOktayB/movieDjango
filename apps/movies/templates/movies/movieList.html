@@ -3,25 +3,29 @@
         <div class="row">
             <div class="col-3">
                 <div class="list-group">
+                    <!-- Tüm Filmler Butonu -->
+                    <a href="{% url 'movies' %}" class="list-group-item list-group-item-action {% if not secilen_kategori %}active{% endif %}">
+                        Tüm Filmler
+                    </a>
                     {% for kategori in kategoriler %}    
-                        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                        {{kategori}}
+                        <a href="{% url 'categories' kategori.id %}" 
+                           class="list-group-item list-group-item-action {% if secilen_kategori.id == kategori.id %}active{% endif %}">
+                            {{ kategori }}
                         </a>
                     {% endfor %}
-                  </div>
+                </div>
             </div>
             <div class="col-9">
                 <div class="row">
-                    
-                        {% for f in filmler  %}
+                    {% for f in filmler %}
                         <div class="col-4">
                             {% include 'movies/partials/movieCard.html' %}
-                            <!--DRY ilkesine göre kendimizi tekrar etmemek için kullanılabilecek yapıyı modüler hale getirmeliyiz. Hem kod daha okunaklı oluyor.-->
                         </div>
-                        {% endfor %}
-
-                    </div>
+                    {% empty %}
+                        <p>Bu kategoride henüz film yok.</p>
+                    {% endfor %}
                 </div>
             </div>
+        </div>
     </div>
-  </div>
+</div>

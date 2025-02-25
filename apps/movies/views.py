@@ -26,3 +26,15 @@ def movie_details(request, id):
         "filmler": Movie.objects.all()
     }
     return render(request, "movies/details.html", data)
+
+def category_movies(request, id):
+    kategori = Category.objects.get(id=id)  # Seçilen kategoriyi al
+    filmler = Movie.objects.filter(category=kategori)  # O kategoriye ait filmleri al
+
+    data = {
+        "secilen_kategori": kategori,
+        "kategoriler": Category.objects.all(),
+        "filmler": filmler
+    }
+    
+    return render(request, "movies/movies.html", data)
