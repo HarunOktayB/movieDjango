@@ -1,6 +1,5 @@
 {% load static  %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +9,11 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Django Deneme</title>
         <!-- Diğer stil dosyaları -->
+        
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
     {% block styles %}
     
     {% endblock %}
-
 </head>
 <body>
  
