@@ -6,6 +6,6 @@
       <h5 class="card-title">{{ f.name }} filmi</h5>
       <p class="card-text">{{ f.name }} filmi baya iyidir</p> 
       <!-- buraya model içeriisne yazılan film açıklaması koyulabilir mantık anlaşıldığı için üzerinde uğraşılmdı -->
-      <a href="{% url 'details' f.id %}" class="btn btn-danger">Go somewhere</a>
+      <a href="{% url 'details' f.slug %}" class="btn btn-danger">Go somewhere</a>
     </div>
   </div> 

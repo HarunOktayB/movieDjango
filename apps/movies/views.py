@@ -22,9 +22,9 @@ def movies(request):
     }
     return render(request, "movies/movies.html", data)
 
-def movie_details(request, id):
+def movie_details(request, slug):
     data = {
-        "id": Movie.objects.get(id=id),
+        "id": Movie.objects.get(slug=slug),
         "kategoriler": Category.objects.all(),
         "filmler": Movie.objects.all()
     }

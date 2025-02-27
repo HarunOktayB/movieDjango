@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'), 
     path('movies', views.movies, name='movies'),
-    path('movies/<int:id>', views.movie_details, name='details'),
+    path('movies/<slug:slug>', views.movie_details, name='details'),
     path('movies/category/<int:id>/', views.category_movies, name='category_movies'),  # ✅ Eklendi!
 
     #Burada id parametresi alıyoruz ve bu id parametresi ile movie_details fonksiyonuna yönlendiriyoruz.

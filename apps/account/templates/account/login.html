@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="col">
+            <h1>Login</h1>
+
+            <hr>
+
+            <form action="{% url  'login' % }" method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type = 'text' class="form-control" name="username"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type = 'password' class="form-control" name="password"></div>
+                </div>
+                <div class="mb-3 align-items-center d-flex justify-content-center"></div>
+                <button type="submit" class="btn btn-danger">Login</button>
+            </form>
+        </div>
+    
+ {%endblock %}
+<h1>Login sayfası</h1>

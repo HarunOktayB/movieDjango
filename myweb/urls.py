@@ -3,7 +3,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('apps.movies.urls'))
+    path('', include('apps.movies.urls')),
+    path('account/', include('apps.account.urls'))
 ]
 # Burada include fonksiyonunu kullanarak movies uygulamasını projemize dahil ediyoruz.
 # Bu sayede movies uygulamasının urls.py dosyasına yönlendirme yapmış oluyoruz.
