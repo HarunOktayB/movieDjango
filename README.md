@@ -11,6 +11,14 @@ Bu projede django framework yapısını öğrenmek amacıyla basit bir film web 
 - login, registration, Django default user model.
 - Graphviz kullanılarak model görselleştirme
 
+## How to run, respectively:
+- python -m venv .venv (create venv named .venv)
+- .venv\scripts\activate (for windows)
+- pip install -r requirements.txt
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py runserver
+
 ## Aşağıdaki görsellerde template sayfaları mevcuttur.
 
 ![my_project_visualized](https://github.com/user-attachments/assets/f182e823-ce84-4ef3-87a7-1310cce3baef)
