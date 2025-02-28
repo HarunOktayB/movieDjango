@@ -1,1 +1,65 @@
-<h1>Register sayfası</h1>
+{% extends 'base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="col"> 
+            <h1>Register</h1>
+            <hr> 
+
+            {% if error %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ error }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endif %}
+
+            <form action="{% url 'register' %}" method="POST">
+                {% csrf_token %}
+                
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" name="username">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password2" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="password2">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="first_name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="user_type" class="form-label">User Type</label>
+                    <select class="form-control" name="user_type">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+
+                <div class="mb-3 align-items-center d-flex justify-content-center">
+                    <button type="submit" class="btn btn-danger">Register</button>
+                </div>
+            </form>
+            
+            <a href="{% url 'login' %}">Login</a>
+        </div>
+    </div>
+{% endblock %}
+
