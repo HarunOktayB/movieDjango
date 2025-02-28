@@ -23,6 +23,7 @@ Bu projede django framework yapısını öğrenmek amacıyla basit bir film web 
 
 ![my_project_visualized](https://github.com/user-attachments/assets/f182e823-ce84-4ef3-87a7-1310cce3baef)
 ![image](https://github.com/user-attachments/assets/4c370c1a-04a6-4f76-aec3-bd3df24ab73a)
-![image](https://github.com/user-attachments/assets/e62c2593-39fd-4efc-bfc5-13369a9e0172)
-![movieDetails](https://github.com/user-attachments/assets/880f8037-4b12-441d-b8dc-d4fea344ebb2)
+![image](https://github.com/user-attachments/assets/1a80cb28-2545-49bc-8096-75de7aa6a69e)
+![image](https://github.com/user-attachments/assets/6f87dd90-319f-408d-b27b-3a02ea7e5d4c)
+
 
