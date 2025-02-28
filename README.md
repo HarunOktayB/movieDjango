@@ -8,9 +8,12 @@ Bu projede django framework yapısını öğrenmek amacıyla basit bir film web 
 - statik data kullanımı
 - template inheritance
 - model, migration, id
+- login, registration, Django default user model.
+- Graphviz kullanılarak model görselleştirme
 
 ## Aşağıdaki görsellerde template sayfaları mevcuttur.
 
+![my_project_visualized](https://github.com/user-attachments/assets/f182e823-ce84-4ef3-87a7-1310cce3baef)
 ![image](https://github.com/user-attachments/assets/4c370c1a-04a6-4f76-aec3-bd3df24ab73a)
 ![image](https://github.com/user-attachments/assets/e62c2593-39fd-4efc-bfc5-13369a9e0172)
 ![movieDetails](https://github.com/user-attachments/assets/880f8037-4b12-441d-b8dc-d4fea344ebb2)
