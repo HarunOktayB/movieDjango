@@ -5,7 +5,8 @@ urlpatterns = [
     path('', views.home, name='home'), 
     path('movies', views.movies, name='movies'),
     path('movies/<slug:slug>', views.movie_details, name='details'),
-    path('movies/category/<int:id>/', views.category_movies, name='category_movies'),  # ✅ Eklendi!
+    path('movies/category/<int:id>/', views.category_movies, name='category_movies'), 
+    path('movies/search/', views.movie_search, name='movie_search'), # Arama Endpoint'i
 
     #Burada id parametresi alıyoruz ve bu id parametresi ile movie_details fonksiyonuna yönlendiriyoruz.
     #Bu sayede her bir film için ayrı bir sayfa oluşturmuş oluyoruz.
