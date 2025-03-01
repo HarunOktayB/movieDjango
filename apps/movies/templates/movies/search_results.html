@@ -1,0 +1,11 @@
+{% if movies %}
+    <ul class="list-group mt-2">
+        {% for movie in movies %}
+            <li class="list-group-item">
+                <a href="{% url 'details' movie.slug %}">{{ movie.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p class="text-muted mt-2">Sonuç bulunamadı.</p>
+{% endif %}

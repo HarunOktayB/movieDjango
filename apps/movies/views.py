@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Category, Movie
+from django.http import HttpResponse
 
 def home(request):
     data = {
@@ -46,3 +47,13 @@ def category_movies(request, id):
     }
     
     return render(request, "movies/movies.html", data)
+
+
+def movie_search(request):
+    query = request.GET.get('search', '').strip()
+    if query:
+        movies = Movie.objects.filter(name__icontains=query)  # Film ismine göre arama yap
+    else:
+        movies = []
+
+    return render(request, "movies/search_results.html", {"movies": movies})
